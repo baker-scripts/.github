@@ -1,0 +1,10 @@
+version: 2
+# Renovate (renovate.json) owns dependency updates here. This entry keeps
+# Dependabot config valid while opening zero version-update PRs, so the two
+# tools do not duplicate work.
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 0
