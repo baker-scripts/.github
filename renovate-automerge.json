@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared bot-PR automerge policy for bakerboy448/* and baker-scripts/*: patch and minor updates automerge once CI passes, after a 3-day release-age hold. Public repos use GitHub auto-merge gated on required status checks. Private repos on GitHub Free set platformAutomerge to false, so Renovate merges only when every status check on the branch is green and never when a branch has zero checks. Rules in a repo's own config come after this preset and win.",
+  "platformAutomerge": true,
+  "ignoreTests": false,
+  "packageRules": [
+    {
+      "description": "Patch and minor updates: automerge when CI is green, held 3 days so a bad release surfaces first",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "minimumReleaseAge": "3 days",
+      "automerge": true
+    }
+  ]
+}
