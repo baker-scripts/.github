@@ -32,6 +32,6 @@ jobs:
     if: github.event_name == 'push' && needs.pre-commit.result == 'success'
     permissions:
       contents: write
-    uses: bakerboy448/.github/.github/workflows/release-calver.yml@85827bfee520e0da25333f4323219dbe54d1056b
+    uses: bakerboy448/.github/.github/workflows/release-calver.yml@625cd5467e2b71e44d10f06697535abca356f842
     with:
       sha: ${{ github.sha }}
